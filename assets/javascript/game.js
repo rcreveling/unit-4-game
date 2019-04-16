@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+});
+
+
 var location = ["Fighting Area", "Defending Area", "Out of Combat"]
 var characters = ["Hannibal", "B.A. Baracus", "Face", "Murdock"]
 
