@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-});
-
-
 var location = ["Fighting Area", "Defending Area", "Out of Combat"]
 var characters = ["Hannibal", "B.A. Baracus", "Face", "Murdock"]
 
@@ -90,3 +84,50 @@ var Colonel_Lynch = {
         "Miss the Jump"
     ]
 }
+
+var Decker = {
+    name: "Decker",
+    age: 41,
+    HP: 300,
+    abilities: [
+
+    ]
+}
+
+
+// END CHARACTERS //
+
+
+$("#charBtn").on("click", function () {
+    var parentElement = $("#infoDiv");
+    var cards = $("#infoDiv").createElement("<div>");
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

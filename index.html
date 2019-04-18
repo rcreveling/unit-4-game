@@ -6,33 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="assets\css\style.css">
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-    <nav></nav>
-    <ul id="slide-out" class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img>
-                </div>
-                <a href="#user"><img class="circle"></a>
-                <a href="#name"><span class="white-text name">John Doe</span></a>
-                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-            </div>
-        </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li>
-            <div class="divider"></div>
-        </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <!--Nav Bar-->
+    <nav>
+        <div class="nav-wrapper black">
+            <img src="assets\images\a-team-logo.png" class="a-team-logo">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <br>
+                <li><button id="menuBtn" class="btn black"> Menu </button></li>
+                <br>
+                <li><button id="pauseBtn" class="btn black"> Pause </button></li>
+                <br>
+                <li><button id="resumeBtn" class="btn black text-grey-lighten-2"> Resume </button></li>
+                <br>
+                <li><button id="charBtn" class="btn black">Characters</button></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Informational Area/Character/Menu-->
 
+    <div id="infoDiv" class="informationArea">
+        <div class="container">
+            <div class="row no-wrap">
+                <div class="col s3">
+                    <div class="card horizontal">
+                        <div class="card-image charImg">
+                            <img id="hannibal" src="assets\images\hannibal.jpg">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>John "Hannibal" Smith</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="card horizontal">
+                        <div class="card-image charImg">
+                            <img id="baracus" src="assets\images\b-a-baracus.jpg">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>"Bad Attitude" Baracus</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s3">
+
+                    <div class="card horizontal">
+                        <div class="card-image charImg">
+                            <img id="murdock" src="assets\images\howlin-mad-murdock.jpg">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>"Howlin' Mad" Murdock</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s3">
+                <div class="card horizontal">
+                    <div class="card-image charImg">
+                        <img id="face" src="assets\images\templeton__face.png">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>Templeton "Face" Peck</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top half Screen-->
+    <div class="bottomDiv grey lighten-2">
+
+
+
+
+    </div>
+    <!--End HTML Code-->
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/materialize.js"></script>
 </body>
 

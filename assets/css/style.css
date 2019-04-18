@@ -1,0 +1,43 @@
+.a-team-logo {
+    max-height: 70px;
+    max-width: 85px;
+    float: right;
+    
+}
+
+.informationArea {
+    height: 36vh;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(175, 2, 2, 0.842);
+    border-bottom: solid;
+    border-top: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.charImg {
+    max-width: auto;
+    height: 182px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cardDisplay {
+    height: 300px;
+}
+
+.cardHidden {
+    display: none;
+}
+
+.no-wrap {
+    
+    overflow-x: none;
+    display: inline !important;
+    clear: none !important;
+}
+
+.bottomDiv {
+    height: 65vh;
+}
