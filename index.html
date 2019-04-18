@@ -14,6 +14,8 @@
 
 <body>
     <!--Nav Bar-->
+    <img src="./assets/images/hannibal-gameCanvas-model.png" class="hiddenImage" id="gameHannibal">
+    <img src="assets/images/b-a-gameplayCanvas-model.png" class="hiddenImage" id="gameBa">
     <header>
         <nav>
             <div class="nav-wrapper black">
@@ -24,14 +26,13 @@
                     <br>
                     <li><button id="pauseBtn" class="btn black"> Pause </button></li>
                     <br>
-                    <li><button id="resumeBtn" class="btn black text-grey-lighten-2"> Resume </button></li>
+                    <li><button id="resumeBtn" class="btn black"> Resume </button></li>
                     <br>
-                    <li><button id="charBtn" class="btn black">Characters</button></li>
+                    <li><button id="" class="btn black">Characters</button></li>
                 </ul>
             </div>
         </nav>
         <!-- Informational Area/Character/Menu-->
-
         <div id="infoDiv" class="informationArea">
             <div class="container">
                 <div class="row no-wrap">
@@ -45,7 +46,7 @@
                                     <p>John "Hannibal" Smith</p>
                                 </div>
                                 <div class="card-action">
-                                    <button class="btn black" id="selHannibal">Select</button>
+                                    <button class="btn black charBtn" id="selHannibal">Select</button>
                                 </div>
                             </div>
                         </div>
@@ -60,14 +61,12 @@
                                     <p>Bosco "Bad Attitude" Baracus</p>
                                 </div>
                                 <div class="card-action">
-                                    <button class="btn black" id="selBa">Select</button>
+                                    <button class="btn black charBtn" id="selBa">Select</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col s3">
-
                         <div class="card horizontal">
                             <div class="card-image charImg">
                                 <img id="murdock" src="assets\images\howlin-mad-murdock.jpg">
@@ -77,7 +76,7 @@
                                     <p>"Howlin' Mad" Murdock</p>
                                 </div>
                                 <div class="card-action">
-                                    <button class="btn black" id="selMurdock">Select</button>
+                                    <button class="btn black charBtn" id="selMurdock">Select</button>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +93,7 @@
                                 <p>Templeton "Face" Peck</p>
                             </div>
                             <div class="card-action">
-                                <button class="btn black" id="selFace">Select</button>
+                                <button class="btn black charBtn" id="selFace">Select</button>
                             </div>
                         </div>
                     </div>
@@ -103,7 +102,6 @@
         </div>
     </header>
     <!-- End Top half Screen-->
-
     <div class="bottomDiv grey lighten-2">
         <!--Side Bar-->
         <div class="sidenavLeft">
@@ -114,25 +112,20 @@
         </div>
         <!--End Side Bar-->
         <div class="wrapper">
-            <div class="container">
+            <div class="container bottomCont">
                 <div class="row">
-                    <div class="col s12 black canvas gameplayCanvas">
-
+                    <div class="col s12">
+                        <canvas id="canvas" class="canvas black gameplayCanvas"></canvas>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </div>
     <!--End HTML Code-->
-
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/materialize.js"></script>
+    <script src="./assets/javascript/materialize.js"></script>
+    <script src="./assets/javascript/main.js"></script>
 </body>
 
 </html>

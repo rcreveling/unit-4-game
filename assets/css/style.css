@@ -61,4 +61,15 @@
 .gameplayCanvas {
     height: 50vh;
     margin-top: 2vh;
+    
+}
+
+.bottomCont {
+    width: 90vw !important;
+    margin-right: -4vw !important;
+    margin-left: -4vw !important;
+}
+
+.hiddenImage {
+    display: none;
 }

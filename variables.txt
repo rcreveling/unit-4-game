@@ -1,0 +1,36 @@
+My IDs:
+
+
+    Buttons:
+        #selHannibal: line 47
+
+        #selBa: line 62
+
+        #selMurdock: line 77
+
+        #selFace: line 94
+
+    Images:
+        #hannibal: line 40
+        #ba: line 55
+        #murdock: line 70
+        #face: line 85
+
+    Divs:
+
+
+My Classes:
+
+
+    Buttons:
+
+
+    Images:
+
+
+    Divs:
+        .charImg: lines 39, 54, 69, 86
+
+
+
+
