@@ -14,98 +14,119 @@
 
 <body>
     <!--Nav Bar-->
-    <nav>
-        <div class="nav-wrapper black">
-            <img src="assets\images\a-team-logo.png" class="a-team-logo">
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <br>
-                <li><button id="menuBtn" class="btn black"> Menu </button></li>
-                <br>
-                <li><button id="pauseBtn" class="btn black"> Pause </button></li>
-                <br>
-                <li><button id="resumeBtn" class="btn black text-grey-lighten-2"> Resume </button></li>
-                <br>
-                <li><button id="charBtn" class="btn black">Characters</button></li>
+    <header>
+        <nav>
+            <div class="nav-wrapper black">
+                <img src="assets\images\a-team-logo.png" class="a-team-logo">
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <br>
+                    <li><button id="menuBtn" class="btn black"> Menu </button></li>
+                    <br>
+                    <li><button id="pauseBtn" class="btn black"> Pause </button></li>
+                    <br>
+                    <li><button id="resumeBtn" class="btn black text-grey-lighten-2"> Resume </button></li>
+                    <br>
+                    <li><button id="charBtn" class="btn black">Characters</button></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Informational Area/Character/Menu-->
+
+        <div id="infoDiv" class="informationArea">
+            <div class="container">
+                <div class="row no-wrap">
+                    <div class="col s3">
+                        <div class="card horizontal">
+                            <div class="card-image charImg">
+                                <img id="hannibal" src="assets\images\hannibal.jpg">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>John "Hannibal" Smith</p>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn black" id="selHannibal">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s3">
+                        <div class="card horizontal">
+                            <div class="card-image charImg">
+                                <img id="ba" src="assets\images\b-a-baracus.jpg">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>Bosco "Bad Attitude" Baracus</p>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn black" id="selBa">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s3">
+
+                        <div class="card horizontal">
+                            <div class="card-image charImg">
+                                <img id="murdock" src="assets\images\howlin-mad-murdock.jpg">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>"Howlin' Mad" Murdock</p>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn black" id="selMurdock">Select</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="card horizontal">
+                        <div class="card-image charImg">
+                            <img id="face" src="assets\images\templeton__face.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>Templeton "Face" Peck</p>
+                            </div>
+                            <div class="card-action">
+                                <button class="btn black" id="selFace">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Top half Screen-->
+
+    <div class="bottomDiv grey lighten-2">
+        <!--Side Bar-->
+        <div class="sidenavLeft">
+            <ul id="slide-out" class="sidenav-fixed">
+                <li><a href="#!">First Sidebar Link</a></li>
+                <li><a href="#!">Second Sidebar Link</a></li>
             </ul>
         </div>
-    </nav>
-    <!-- Informational Area/Character/Menu-->
+        <!--End Side Bar-->
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 black canvas gameplayCanvas">
 
-    <div id="infoDiv" class="informationArea">
-        <div class="container">
-            <div class="row no-wrap">
-                <div class="col s3">
-                    <div class="card horizontal">
-                        <div class="card-image charImg">
-                            <img id="hannibal" src="assets\images\hannibal.jpg">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>John "Hannibal" Smith</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s3">
-                    <div class="card horizontal">
-                        <div class="card-image charImg">
-                            <img id="baracus" src="assets\images\b-a-baracus.jpg">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>"Bad Attitude" Baracus</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s3">
-
-                    <div class="card horizontal">
-                        <div class="card-image charImg">
-                            <img id="murdock" src="assets\images\howlin-mad-murdock.jpg">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>"Howlin' Mad" Murdock</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col s3">
-                <div class="card horizontal">
-                    <div class="card-image charImg">
-                        <img id="face" src="assets\images\templeton__face.png">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>Templeton "Face" Peck</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
         </div>
-    </div>
-    <!-- End Top half Screen-->
-    <div class="bottomDiv grey lighten-2">
-
-
-
-
     </div>
     <!--End HTML Code-->
 
