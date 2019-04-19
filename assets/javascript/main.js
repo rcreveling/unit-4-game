@@ -1,3 +1,9 @@
+/* Materialize Collapsible */
+$(document).ready(function () {
+    $('.collapsible').collapsible();
+});
+
+/* Materialize Collapsible */
 $(function () {
     var location = ["Fighting Area", "Defending Area", "Out of Combat"]
     var characters = ["Hannibal", "B.A. Baracus", "Face", "Murdock"]
@@ -5,6 +11,10 @@ $(function () {
     var ctx = c.getContext("2d");
     var image1 = document.getElementById("gameHannibal");
     var image2 = document.getElementById("gameBa");
+    var image3 = document.getElementById("gameMurdock");
+    var image4 = document.getElementById("gameFace");
+    var charInfo = [];
+
     // Characters, Location, HP, Abilities //
 
     var Face = {
@@ -108,34 +118,39 @@ $(function () {
         var swidth = "";
         var sheight = "";
 
+
         switch (char) {
             case 'selHannibal':
                 pick = image1;
-                sx = 0;
-                sy = 0;
-                swidth = 150;
-                sheight = 150;
-                break;
-            case 'selBa':
-                pick = image2;
-                sx = 100;
+                sx = 50;
                 sy = 0;
                 swidth = 200;
                 sheight = 200;
+                charInfo = [Hannibal.name, Hannibal.age, Hannibal.HP, Hannibal.abilities[0], Hannibal.abilities[1], Hannibal.abilities[2], Hannibal.abilities[3], Hannibal.items]
+                break;
+            case 'selBa':
+                pick = image2;
+                sx = 30;
+                sy = 0;
+                swidth = 600;
+                sheight = 600;
+                charInfo = [BAB.name, BAB.age, BAB.HP, BAB.abilities[0], BAB.abilities[1], BAB.abilities[2], BAB.abilities[3], BAB.items]
                 break;
             case 'selMurdock':
-                pick = '';
-                sx = 0;
-                sy = 0;
-                swidth = 100;
-                sheight = 100;
+                pick = image3;
+                sx = 50;
+                sy = 20;
+                swidth = 190;
+                sheight = 150;
+                charInfo = [Murdock.name, Murdock.age, Murdock.HP, Murdock.abilities[0], Murdock.abilities[1], Murdock.abilities[2], Murdock.abilities[3], Murdock.items]
                 break;
             case 'selFace':
-                pick = '';
+                pick = image4;
                 sx = 0;
                 sy = 0;
-                swidth = 100;
-                sheight = 100;
+                swidth = 500;
+                sheight = 500;
+                charInfo = [Face.name, Face.age, Face.HP, Face.abilities[0], Face.abilities[1], Face.abilities[2], Face.abilities[3], Face.items]
                 break;
 
         }
@@ -143,13 +158,33 @@ $(function () {
     }
 
 
-    $(document).on("click", ".charBtn", function () {
-        console.log("click")
 
-        var charP = $(this).attr('id')
-        var img = drawnCharacterImg(charP)
-        console.log(img)
-        ctx.drawImage(img.pick, img.sx, img.sy, img.swidth, img.sheight, 30, 30, 50, 50)
+    $(document).on("click", ".charBtn", function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        var charP = $(this).attr('id');
+        var img = drawnCharacterImg(charP);
+        console.log(img);
+        ctx.rect(10, 10, 200, 200);
+        ctx.drawImage(img.pick, img.sx, img.sy, img.swidth, img.sheight, 20, 20, 100, 100);
+    })
+
+    $(".charBtn").one("click", function () {
+        if ($("#charInfoArea").hasClass("hiddenImage")) {
+            $("#charInfoArea").toggleClass("hiddenImage");
+        }
+    })
+
+    $(document).on("click", ".charBtn", function () {
+
+        $("#name").text(charInfo[0]);
+        $("#age").text("Age - " + charInfo[1]);
+        $("#HP").text("Health - " + charInfo[2]);
+        $("#abilityOne").text(charInfo[3]);
+        $("#abilityTwo").text(charInfo[4]);
+        $("#abilityThree").text(charInfo[5]);
+        $("#abilityFour").text(charInfo[6]);
     })
 
 })
+

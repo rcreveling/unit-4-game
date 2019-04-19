@@ -15,7 +15,9 @@
 <body>
     <!--Nav Bar-->
     <img src="./assets/images/hannibal-gameCanvas-model.png" class="hiddenImage" id="gameHannibal">
-    <img src="assets/images/b-a-gameplayCanvas-model.png" class="hiddenImage" id="gameBa">
+    <img src="./assets/images/b-a-gameplayCanvas-model.png" class="hiddenImage" id="gameBa">
+    <img src="./assets/images/murdock-gameCanvas-model.png" class="hiddenImage" id="gameMurdock">
+    <img src="assets/images/face-gameplayCanvas-model.png" class="hiddenImage" id="gameFace">
     <header>
         <nav>
             <div class="nav-wrapper black">
@@ -24,11 +26,12 @@
                     <br>
                     <li><button id="menuBtn" class="btn black"> Menu </button></li>
                     <br>
-                    <li><button id="pauseBtn" class="btn black"> Pause </button></li>
-                    <br>
-                    <li><button id="resumeBtn" class="btn black"> Resume </button></li>
+                    <li><button id="pauseBtn" class="btn black"> Pause/Resume </button></li>
                     <br>
                     <li><button id="" class="btn black">Characters</button></li>
+                    <br>
+                    <li><button id="startBtn" class="btn white black-text"> Start Round! </button></li>
+
                 </ul>
             </div>
         </nav>
@@ -106,8 +109,53 @@
         <!--Side Bar-->
         <div class="sidenavLeft">
             <ul id="slide-out" class="sidenav-fixed">
-                <li><a href="#!">First Sidebar Link</a></li>
-                <li><a href="#!">Second Sidebar Link</a></li>
+                <li>
+                    <div id="charInfoArea" class="hiddenImage charInfoArea">
+                        <h2 id="name"></span></h2>
+                        <p id="age"></p>
+                        <p id="HP"></p>
+                        <!--Materialize Collapsible-->
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <strong id="abilityOne"></strong>
+                                </div>
+                                <div class="collapsible-body">
+                                    <span class="abilityOneDescription">
+                                        <i class="material-icons floatRight">forward</i>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="abilityTwo"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="abilityTwoDescription">
+                                        <i class="material-icons floatRight">forward</i>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="abilityThree"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="abilityThreeDescription">
+                                        <i class="material-icons floatRight">forward</i>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="abilityFour"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="abilityFourDescription">
+                                        <i class="material-icons floatRight">forward</i>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- End Materialize Collapsible-->
+                    </div>
+                </li>
+                <li><a href="#!">______________________</a>
+                </li>
             </ul>
         </div>
         <!--End Side Bar-->
@@ -115,7 +163,7 @@
             <div class="container bottomCont">
                 <div class="row">
                     <div class="col s12">
-                        <canvas id="canvas" class="canvas black gameplayCanvas"></canvas>
+                        <canvas id="canvas" class="canvas blue gameplayCanvas"></canvas>
                     </div>
                 </div>
             </div>
