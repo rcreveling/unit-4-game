@@ -2560,9 +2560,10 @@ summary {
  */
 canvas {
   display: inline-block;
-  width: 65vw;
-  height: 50vh;
+  width: 55vw;
+  height: 40vh;
   margin-left: 1vw;
+  margin-right: 1vw;
 
 }
 
@@ -3574,7 +3575,7 @@ table span.badge {
 }
 
 .row .col.s12 {
-  width: 100%;
+  width: auto;
   margin-left: auto;
   left: auto;
   right: auto;

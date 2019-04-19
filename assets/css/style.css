@@ -41,6 +41,7 @@
 
 .bottomDiv {
     height: 65vh;
+    width: 100vw;
     margin-top: 0;
 }
 
@@ -53,8 +54,18 @@
     padding: 1vh 2vh 1vh 2vh;
 }
 
+.sidenavRight {
+    max-width: 20vw;
+    height: 100%;
+    float: right;
+    background-color: white;
+    border-left:solid;
+    padding: 1vh 2vh 1vh 2vh;
+}
+
 .wrapper {
     padding-left: 300px;
+    padding-right: 300px;
 }
 
 

@@ -18,6 +18,8 @@
     <img src="./assets/images/b-a-gameplayCanvas-model.png" class="hiddenImage" id="gameBa">
     <img src="./assets/images/murdock-gameCanvas-model.png" class="hiddenImage" id="gameMurdock">
     <img src="assets/images/face-gameplayCanvas-model.png" class="hiddenImage" id="gameFace">
+    <img src="assets/images/col_lynch.png" class="hiddenImage" id="lynchFace">
+    <img src="assets/images/capt-crane.jpg" class="hiddenImage" id="craneFace">
     <header>
         <nav>
             <div class="nav-wrapper black">
@@ -106,7 +108,68 @@
     </header>
     <!-- End Top half Screen-->
     <div class="bottomDiv grey lighten-2">
-        <!--Side Bar-->
+        <!--Side Bar Right-->
+        <div class="sidenavRight">
+            <ul id="slide-out" class="sidenav-fixed">
+                <li>
+                    <div id="npcInfoArea" class="hiddenImage npcInfoArea">
+                        <h2 id="npcName"></span></h2>
+                        <p id="npcAge"></p>
+                        <p id="npcHP"></p>
+                        <!--Materialize Collapsible-->
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <strong id="npcAbilityOne"></strong>
+                                </div>
+                                <div class="collapsible-body">
+                                    <span class="npcAbilityOneDescription">
+                                    </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal1"
+                                        id="useAbilityOne">forward</i>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="npcAbilityTwo"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="npcAbilityTwoDescription">
+                                    </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal2"
+                                        id="useAbilityTwo">forward</i>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="npcAbilityThree"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="npcAbilityThreeDescription">
+                                    </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal3"
+                                        id="useAbilityThree">forward</i>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong id="npcAbilityFour"></strong></div>
+                                <div class="collapsible-body">
+                                    <span class="npcAbilityFourDescription">
+                                    </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal4"
+                                        id="useAbilityFour">forward</i>
+
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- End Materialize Collapsible-->
+                    </div>
+                </li>
+                <li><a href="#!">______________________</a>
+                </li>
+            </ul>
+        </div>
+        <!--End Side Bar Right-->
+        <!--Side Bar Left-->
         <div class="sidenavLeft">
             <ul id="slide-out" class="sidenav-fixed">
                 <li>
@@ -129,7 +192,7 @@
                                     <div id="modal1" class="modal">
                                         <div class="modal-content">
                                             <h5 id="abilityOnePrompt"></h5>
-                                            <h8>Remaining Uses: __</h8>
+                                            <h8>Remaining Uses: <span id="abilityOneCount"></span></h8>
                                         </div>
                                         <div class="modal-footer">
                                             <a href="#!"
@@ -210,12 +273,15 @@
                 </li>
             </ul>
         </div>
-        <!--End Side Bar-->
+        <!--End Side Bar RIGHT-->
+
+
+
         <div class="wrapper">
             <div class="container bottomCont">
                 <div class="row">
                     <div class="col s12">
-                        <canvas id="canvas" class="canvas green darken-3 gameplayCanvas"></canvas>
+                        <canvas id="canvas" class="canvas green darken-4 gameplayCanvas"></canvas>
                     </div>
                 </div>
             </div>
