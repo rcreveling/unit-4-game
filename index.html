@@ -22,15 +22,15 @@
         <nav>
             <div class="nav-wrapper black">
                 <img src="assets\images\a-team-logo.png" class="a-team-logo">
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <ul id="nav-mobile" class="left hide-on-med-and-down customButtonDiv">
+
+                    <li><button id="menuBtn" class="btn floatLeft black"> Menu </button></li>
                     <br>
-                    <li><button id="menuBtn" class="btn black"> Menu </button></li>
+                    <li><button id="pauseBtn" class="btn floatLeft black"> Pause/Resume </button></li>
                     <br>
-                    <li><button id="pauseBtn" class="btn black"> Pause/Resume </button></li>
+                    <li><button id="" class="btn floatLeft black">Characters</button></li>
                     <br>
-                    <li><button id="" class="btn black">Characters</button></li>
-                    <br>
-                    <li><button id="startBtn" class="btn white black-text"> Start Round! </button></li>
+                    <li><button id="startBtn" class="btn floatLeft white black-text"> Start Round! </button></li>
 
                 </ul>
             </div>
@@ -122,32 +122,84 @@
                                 </div>
                                 <div class="collapsible-body">
                                     <span class="abilityOneDescription">
-                                        <i class="material-icons floatRight">forward</i>
                                     </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal1"
+                                        id="useAbilityOne">forward</i>
+                                    <!--Modal-->
+                                    <div id="modal1" class="modal">
+                                        <div class="modal-content">
+                                            <h5 id="abilityOnePrompt"></h5>
+                                            <h8>Remaining Uses: __</h8>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!"
+                                                class="modal-close waves-effect waves-green btn-flat red darken-3">Yes</a>
+                                        </div>
+                                    </div>
+                                    <!--Modal-->
                                 </div>
                             </li>
                             <li>
                                 <div class="collapsible-header"><strong id="abilityTwo"></strong></div>
                                 <div class="collapsible-body">
                                     <span class="abilityTwoDescription">
-                                        <i class="material-icons floatRight">forward</i>
                                     </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal2"
+                                        id="useAbilityTwo">forward</i>
+                                    <!--Modal 2-->
+                                    <div id="modal2" class="modal">
+                                        <div class="modal-content">
+                                            <h5 id="abilityTwoPrompt"></h5>
+                                            <h8>Remaining Uses: __</h8>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!"
+                                                class="modal-close waves-effect waves-green btn-flat red darken-3">Yes</a>
+                                        </div>
+                                    </div>
+                                    <!--Modal 2-->
                                 </div>
                             </li>
                             <li>
                                 <div class="collapsible-header"><strong id="abilityThree"></strong></div>
                                 <div class="collapsible-body">
                                     <span class="abilityThreeDescription">
-                                        <i class="material-icons floatRight">forward</i>
                                     </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal3"
+                                        id="useAbilityThree">forward</i>
+                                    <!--Modal 3-->
+                                    <div id="modal3" class="modal">
+                                        <div class="modal-content">
+                                            <h5 id="abilityThreePrompt"></h5>
+                                            <h8>Remaining Uses: __</h8>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!"
+                                                class="modal-close waves-effect waves-green btn-flat red darken-3">Yes</a>
+                                        </div>
+                                    </div>
+                                    <!--Modal 3-->
                                 </div>
                             </li>
                             <li>
                                 <div class="collapsible-header"><strong id="abilityFour"></strong></div>
                                 <div class="collapsible-body">
                                     <span class="abilityFourDescription">
-                                        <i class="material-icons floatRight">forward</i>
                                     </span>
+                                    <i class="material-icons floatRight modal-trigger" href="#modal4"
+                                        id="useAbilityFour">forward</i>
+                                    <!--Modal 4-->
+                                    <div id="modal4" class="modal">
+                                        <div class="modal-content">
+                                            <h5 id="abilityFourPrompt"></h5>
+                                            <h8>Remaining Uses: __</h8>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!"
+                                                class="modal-close waves-effect waves-green btn-flat red darken-3">Yes</a>
+                                        </div>
+                                    </div>
+                                    <!--Modal 4-->
                                 </div>
                             </li>
                         </ul>
@@ -163,7 +215,7 @@
             <div class="container bottomCont">
                 <div class="row">
                     <div class="col s12">
-                        <canvas id="canvas" class="canvas blue gameplayCanvas"></canvas>
+                        <canvas id="canvas" class="canvas green darken-3 gameplayCanvas"></canvas>
                     </div>
                 </div>
             </div>

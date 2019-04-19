@@ -2562,7 +2562,7 @@ canvas {
   display: inline-block;
   width: 65vw;
   height: 50vh;
-  margin-left: 3vw;
+  margin-left: 1vw;
 
 }
 
@@ -5850,7 +5850,7 @@ body.keyboard-focused .dropdown-content li:focus {
   border-right: 1px solid #ddd;
   border-left: 0px solid #ddd;
   margin: 0rem 0 1rem -.5rem;
-  width: 20vw;
+  width: 18vw;
 }
 
 .collapsible-header {

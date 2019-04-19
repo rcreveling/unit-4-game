@@ -45,7 +45,7 @@
 }
 
 .sidenavLeft {
-    max-width: 355px;
+    max-width: 20vw;
     height: 100%;
     float: left;
     background-color: white;
@@ -76,12 +76,12 @@
 }
 
 .charInfoArea {
-    width: 350px;
+    width: 20vw;
     float: left;
     display: block;
 }
 .charInfoArea>h2 {
-    max-width: 200px;
+    max-width: 20vw;
     font-size: 20px;
 }
 
@@ -92,5 +92,23 @@
 }
 
 .floatRight {
-    margin-left: 14vw;
+    margin-right: 2vw;
+    display: flex !important;
+    align-self: right;
+    direction: rtl !important;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.customButtonDiv>li:first-child {
+    line-height: 5vh !important;
+    margin-top: 3vh !important;
+    
+}
+.customButtonDiv>li:nth-child(n+3) {
+    padding-top: 2.5vh !important;
+    -webkit-break-after: always !important;
+    line-height: 5vh !important;
 }
