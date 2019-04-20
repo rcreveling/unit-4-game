@@ -97,6 +97,9 @@
 }
 
 #startBtn {
+    position: absolute !important;
+    top: 35vh !important;
+    height: 8vh !important;
     font-size: 1.5em;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(175, 2, 2, 1); 
@@ -122,4 +125,23 @@
     padding-top: 2.5vh !important;
     -webkit-break-after: always !important;
     line-height: 5vh !important;
+}
+
+.ctrlBtn {
+    position: absolute;
+    text-align: left;
+    float: left;
+    overflow-x: none;
+}
+
+#attackBtn {
+    left: 19.2vw;
+    top: 37vh;
+    width: 8vw;
+}
+
+#avoidBtn {
+    left: 27.5vw;
+    top: 37vh;
+    width: 8vw;
 }

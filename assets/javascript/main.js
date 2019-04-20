@@ -26,12 +26,12 @@ $(function () {
         name: "John 'Hannibal' Smith",
         age: 53,
         HP: 100,
-        abilities: [
-            "Make a Plan",
-            "Chameleon",
-            "Grenadier",
-            "Commando"
-        ],
+        abilities: {
+            one: "Make A Plan",
+            two: "Chameleon",
+            three: "Grenadier",
+            four: "Commando"
+        },
 
         abilityDescriptions: ["Get ready for the battle: Take two turns next time you're up",
             "Get into character: put on your favorite disguise and avoid the next hit",
@@ -44,9 +44,16 @@ $(function () {
             "Leather Gloves"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [""]
+        attributes: {
+            strength: 80,
+            agility: 25,
+            accuracy: 85
+        },
 
     }
+
+
+
 
     var BAB = {
         name: "Bad Attitude Baracus",
@@ -64,7 +71,11 @@ $(function () {
             "50lbs Gold"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [""]
+        attributes: {
+            strength: 100,
+            agility: 15,
+            accuracy: 75
+        },
     }
 
 
@@ -86,7 +97,11 @@ $(function () {
             "Socko"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [""]
+        attributes: {
+            strength: 60,
+            agility: 35,
+            accuracy: 90
+        },
     }
 
     var Face = {
@@ -105,7 +120,11 @@ $(function () {
             "Colt Lawman Mk III"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [""]
+        attributes: {
+            strength: 70,
+            agility: 35,
+            accuracy: 85
+        },
     }
     //End A-Team//
     //Begin Enemies//
@@ -118,7 +137,12 @@ $(function () {
             "Miss the Shot",
             "Barely catch up",
             "Miss the Jump"
-        ]
+        ],
+        attributes: {
+            strength: 130,
+            agility: 25,
+            accuracy: 90
+        },
     }
     var Crane = {
         name: "Crane",
@@ -138,12 +162,11 @@ $(function () {
             ""
         ],
         //Agility, Accuracy, Strength//
-        attributes: [
-            { strength } = (
-                20
-            ),
-
-        ]
+        attributes: {
+            strength: 120,
+            agility: 40,
+            accuracy: 95
+        },
     }
     var Decker = {
         name: "Decker",
@@ -163,12 +186,11 @@ $(function () {
             "Call in Crane for morale support, +30% to All Stats for 2 turns"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [
-            { strength } = (
-                20
-            ),
-
-        ]
+        attributes: {
+            strength: 150,
+            agility: 40,
+            accuracy: 75
+        },
     }
     //End Enemies//
 
@@ -191,18 +213,20 @@ $(function () {
                 sy = 0;
                 swidth = 200;
                 sheight = 200;
-                charInfo = [Hannibal.name,
-                Hannibal.age,
-                Hannibal.HP,
-                Hannibal.abilities[0],
-                Hannibal.abilities[1],
-                Hannibal.abilities[2],
-                Hannibal.abilities[3],
-                Hannibal.abilityDescriptions[0],
-                Hannibal.abilityDescriptions[1],
-                Hannibal.abilityDescriptions[2],
-                Hannibal.abilityDescriptions[3],
-                Hannibal.items]
+                charInfo = [
+                    Hannibal.name,
+                    Hannibal.age,
+                    Hannibal.HP,
+                    Hannibal.abilities.one,
+                    Hannibal.abilities.two,
+                    Hannibal.abilities.three,
+                    Hannibal.abilities.four,
+                    Hannibal.abilityDescriptions[0],
+                    Hannibal.abilityDescriptions[1],
+                    Hannibal.abilityDescriptions[2],
+                    Hannibal.abilityDescriptions[3],
+                    Hannibal.items
+                ]
                 break;
             case 'selBa':
                 p = image2;
@@ -210,14 +234,20 @@ $(function () {
                 sy = 0;
                 swidth = 600;
                 sheight = 600;
-                charInfo = [BAB.name,
-                BAB.age,
-                BAB.HP,
-                BAB.abilities[0],
-                BAB.abilities[1],
-                BAB.abilities[2],
-                BAB.abilities[3],
-                BAB.items]
+                charInfo = [
+                    BAB.name,
+                    BAB.age,
+                    BAB.HP,
+                    BAB.abilities[0],
+                    BAB.abilities[1],
+                    BAB.abilities[2],
+                    BAB.abilities[3],
+                    BAB.abilityDescriptions[0],
+                    BAB.abilityDescriptions[1],
+                    BAB.abilityDescriptions[2],
+                    BAB.abilityDescriptions[3],
+                    BAB.items
+                ]
                 break;
             case 'selMurdock':
                 p = image3;
@@ -225,14 +255,20 @@ $(function () {
                 sy = 20;
                 swidth = 190;
                 sheight = 150;
-                charInfo = [Murdock.name,
-                Murdock.age,
-                Murdock.HP,
-                Murdock.abilities[0],
-                Murdock.abilities[1],
-                Murdock.abilities[2],
-                Murdock.abilities[3],
-                Murdock.items]
+                charInfo = [
+                    Murdock.name,
+                    Murdock.age,
+                    Murdock.HP,
+                    Murdock.abilities[0],
+                    Murdock.abilities[1],
+                    Murdock.abilities[2],
+                    Murdock.abilities[3],
+                    Murdock.abilityDescriptions[0],
+                    Murdock.abilityDescriptions[1],
+                    Murdock.abilityDescriptions[2],
+                    Murdock.abilityDescriptions[3],
+                    Murdock.items
+                ]
                 break;
             case 'selFace':
                 p = image4;
@@ -240,14 +276,20 @@ $(function () {
                 sy = 0;
                 swidth = 500;
                 sheight = 500;
-                charInfo = [Face.name,
-                Face.age,
-                Face.HP,
-                Face.abilities[0],
-                Face.abilities[1],
-                Face.abilities[2],
-                Face.abilities[3],
-                Face.items]
+                charInfo = [
+                    Face.name,
+                    Face.age,
+                    Face.HP,
+                    Face.abilities[0],
+                    Face.abilities[1],
+                    Face.abilities[2],
+                    Face.abilities[3],
+                    Murdock.abilityDescriptions[0],
+                    Murdock.abilityDescriptions[1],
+                    Murdock.abilityDescriptions[2],
+                    Murdock.abilityDescriptions[3],
+                    Face.items
+                ]
                 break;
 
         }
@@ -396,7 +438,7 @@ $(function () {
 
 
     $(document).on("click", ".charBtn", function () {
-
+        debugger;
 
         $("#name").text(charInfo[0]);
         $("#age").text("Age - " + charInfo[1]);
