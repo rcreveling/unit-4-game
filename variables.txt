@@ -2,19 +2,19 @@ My IDs:
 
 
     Buttons:
-        #selHannibal: line 47
+        #selHannibal:
 
-        #selBa: line 62
+        #selBa:
 
-        #selMurdock: line 77
+        #selMurdock:
 
-        #selFace: line 94
+        #selFace:
 
     Images:
-        #hannibal: line 40
-        #ba: line 55
-        #murdock: line 70
-        #face: line 85
+        #hannibal:
+        #ba:
+        #murdock:
+        #face: 
 
     Divs:
 

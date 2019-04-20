@@ -1,11 +1,15 @@
+
 /* Materialize Collapsible/Modal Initialization */
 $(document).ready(function () {
     $('.collapsible').collapsible();
     $('.modal').modal();
 });
-
-
 /* Materialize Collapsible */
+
+/*import Characters when NODE ADDED*/
+
+/* import Characters */
+
 $(function () {
     var location = ["Fighting Area", "Defending Area", "Out of Combat"]
     var characters = ["Hannibal", "B.A. Baracus", "Face", "Murdock"]
@@ -32,44 +36,72 @@ $(function () {
             three: "Grenadier",
             four: "Commando"
         },
+        abilityDescriptions: {
+            one: "Get ready for the battle: Take two turns next time you're up. +1 turn",
+            two: "Get into character: put on your favorite disguise and avoid the next hit. +100 Agility, 1 turn",
+            three: "'Nade out - lob one of Uncle Sam's favorite toys at... Uncle Sam. Deal 50 Damage.",
+            four: "Go Full Out: +1 turn, +20 Damage per hit, +20 agility",
+        },
 
-        abilityDescriptions: ["Get ready for the battle: Take two turns next time you're up",
-            "Get into character: put on your favorite disguise and avoid the next hit",
-            "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
-            "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
-        ],
-
-        items: [
-            "Cigar",
-            "Leather Gloves"
-        ],
+        items: {
+            specialOne: "Cigar",
+            specialTwo: "Leather Gloves",
+            specialThree: "Wig",
+            weapon: "Colt Lawman Mk III"
+        },
+        itemFunctions: {
+            specialOne: "",
+            specialTwo: "",
+            specialThree: "",
+            specialFour: ""
+        },
         //Agility, Accuracy, Strength//
         attributes: {
             strength: 80,
             agility: 25,
             accuracy: 85
         },
+        abilitiesFunction(abilitynumber) {
+            var s = $(this).attributes.strength;
+            switch (abilitynumber) {
+                case (one):
 
+                    break;
+                case (two):
+
+                    break;
+                case (three):
+
+                    break;
+                case (four):
+
+                    break;
+            }
+        }
     }
-
-
-
-
     var BAB = {
         name: "Bad Attitude Baracus",
         age: 44,
         HP: 200,
-        abilities: [
-            "Pity The Fool",
-            "Hearts and Minds",
-            "Armor Up",
-            "Baller Brawler"
-        ],
+        abilities: {
+            one: "Pity The Fool",
+            two: "Hearts and Minds",
+            three: "Armor Up",
+            four: "Baller Brawler"
+        },
+        abilityDescriptions: {
+            one: "It's Rhetorical. +20 Strength, 1 turn",
+            two: "Get into character: put on your favorite disguise and avoid the next hit",
+            three: "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
+            four: "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
+        },
+        items: {
+            specialOne: "Van Keys",
+            specialTwo: "50lbs Gold",
+            specialThree: "HeavyWeight Champion Belt",
+            weapon: "Colt Lawman Mk III"
+        },
 
-        items: [
-            "Van Keys",
-            "50lbs Gold"
-        ],
         //Agility, Accuracy, Strength//
         attributes: {
             strength: 100,
@@ -77,25 +109,34 @@ $(function () {
             accuracy: 75
         },
     }
-
-
-
     var Murdock = {
         name: "Howling Mad Murdock",
         age: 45,
         HP: 75,
-        abilities: [
-            "Socko's Modern Strike",
-            "Ride the Skies",
-            "Put em Down",
-            "Apache Commando Master Murdock"
-        ],
-
-        items: [
-            "Leather Bomber Jacket",
-            "Baseball Cap",
-            "Socko"
-        ],
+        abilities: {
+            one: "Socko's Modern Strike",
+            two: "Ride the Skies",
+            three: "Put em Down",
+            four: "Apache Commando Master Murdock"
+        },
+        abilityDescriptions: {
+            one: "Get ready for the battle: Take two turns next time you're up",
+            two: "Get into character: put on your favorite disguise and avoid the next hit",
+            three: "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
+            four: "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
+        },
+        items: {
+            specialOne: "Leather Bomber Jacket",
+            specialTwo: "Baseball Cap",
+            specialThree: "Socko",
+            weapon: "Colt Lawman Mk III"
+        },
+        itemFunctions: {
+            specialOne: "",
+            specialTwo: "",
+            specialThree: "",
+            specialFour: ""
+        },
         //Agility, Accuracy, Strength//
         attributes: {
             strength: 60,
@@ -108,17 +149,30 @@ $(function () {
         name: "Templeton Peck",
         age: 33,
         HP: 100,
-        abilities: [
-            "Heavy Wink",
-            "Flashy Work",
-            "Get The Girl",
-            "Carbine Hail"
-        ],
-
-        items: [
-            "Handkerchief",
-            "Colt Lawman Mk III"
-        ],
+        abilities: {
+            one: "Heavy Wink",
+            two: "Flashy Work",
+            three: "Get The Girl",
+            four: "Carbine Hail"
+        },
+        abilityDescriptions: {
+            one: "Get ready for the battle: Take two turns next time you're up",
+            two: "Get into character: put on your favorite disguise and avoid the next hit",
+            three: "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
+            four: "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
+        },
+        items: {
+            specialOne: "Handkerchief",
+            specialTwo: "",
+            specialThree: "",
+            weapon: "Colt Lawman Mk III"
+        },
+        itemFunctions: {
+            specialOne: "",
+            specialTwo: "",
+            specialThree: "",
+            specialFour: ""
+        },
         //Agility, Accuracy, Strength//
         attributes: {
             strength: 70,
@@ -127,6 +181,7 @@ $(function () {
         },
     }
     //End A-Team//
+
     //Begin Enemies//
     var Colonel_Lynch = {
         name: "Col. Lynch",
@@ -199,7 +254,7 @@ $(function () {
     var pick;
 
     var drawnCharacterImg = function (char) {
-
+        debugger;
         var sx = "";
         var sy = "";
         var swidth = "";
@@ -221,10 +276,10 @@ $(function () {
                     Hannibal.abilities.two,
                     Hannibal.abilities.three,
                     Hannibal.abilities.four,
-                    Hannibal.abilityDescriptions[0],
-                    Hannibal.abilityDescriptions[1],
-                    Hannibal.abilityDescriptions[2],
-                    Hannibal.abilityDescriptions[3],
+                    Hannibal.abilityDescriptions.one,
+                    Hannibal.abilityDescriptions.two,
+                    Hannibal.abilityDescriptions.three,
+                    Hannibal.abilityDescriptions.four,
                     Hannibal.items
                 ]
                 break;
@@ -238,14 +293,14 @@ $(function () {
                     BAB.name,
                     BAB.age,
                     BAB.HP,
-                    BAB.abilities[0],
-                    BAB.abilities[1],
-                    BAB.abilities[2],
-                    BAB.abilities[3],
-                    BAB.abilityDescriptions[0],
-                    BAB.abilityDescriptions[1],
-                    BAB.abilityDescriptions[2],
-                    BAB.abilityDescriptions[3],
+                    BAB.abilities.one,
+                    BAB.abilities.two,
+                    BAB.abilities.three,
+                    BAB.abilities.four,
+                    BAB.abilityDescriptions.one,
+                    BAB.abilityDescriptions.two,
+                    BAB.abilityDescriptions.three,
+                    BAB.abilityDescriptions.four,
                     BAB.items
                 ]
                 break;
@@ -259,14 +314,14 @@ $(function () {
                     Murdock.name,
                     Murdock.age,
                     Murdock.HP,
-                    Murdock.abilities[0],
-                    Murdock.abilities[1],
-                    Murdock.abilities[2],
-                    Murdock.abilities[3],
-                    Murdock.abilityDescriptions[0],
-                    Murdock.abilityDescriptions[1],
-                    Murdock.abilityDescriptions[2],
-                    Murdock.abilityDescriptions[3],
+                    Murdock.abilities.one,
+                    Murdock.abilities.two,
+                    Murdock.abilities.three,
+                    Murdock.abilities.four,
+                    Murdock.abilityDescriptions.one,
+                    Murdock.abilityDescriptions.two,
+                    Murdock.abilityDescriptions.three,
+                    Murdock.abilityDescriptions.four,
                     Murdock.items
                 ]
                 break;
@@ -280,14 +335,14 @@ $(function () {
                     Face.name,
                     Face.age,
                     Face.HP,
-                    Face.abilities[0],
-                    Face.abilities[1],
-                    Face.abilities[2],
-                    Face.abilities[3],
-                    Murdock.abilityDescriptions[0],
-                    Murdock.abilityDescriptions[1],
-                    Murdock.abilityDescriptions[2],
-                    Murdock.abilityDescriptions[3],
+                    Face.abilities.one,
+                    Face.abilities.two,
+                    Face.abilities.three,
+                    Face.abilities.four,
+                    Murdock.abilityDescriptions.one,
+                    Murdock.abilityDescriptions.two,
+                    Murdock.abilityDescriptions.three,
+                    Murdock.abilityDescriptions.four,
                     Face.items
                 ]
                 break;
@@ -397,9 +452,11 @@ $(function () {
             $("#charInfoArea").toggleClass("hiddenImage");
         }
     })
+
     //NPC Start Button Functions//
     var startClicks = 0;
     $(document).on("click", "#startBtn", function () {
+
 
 
         if (startClicks === 0) {
@@ -423,9 +480,7 @@ $(function () {
         ctx.drawImage(img.pick, img.sx, img.sy, img.swidth, img.sheight, 200, 0, 100, 100);
 
     })
-
-
-
+    //Start Button Initialize Enemy Display//
     $("#startBtn").one("click", function () {
         if ($("#npcInfoArea").hasClass("hiddenImage")) {
             $("#npcInfoArea").toggleClass("hiddenImage");
@@ -433,12 +488,9 @@ $(function () {
         }
     })
 
-
-
-
-
+    //charBtn function for Abilities, Ability Descriptions, and other CharInfo//
     $(document).on("click", ".charBtn", function () {
-        debugger;
+
 
         $("#name").text(charInfo[0]);
         $("#age").text("Age - " + charInfo[1]);
@@ -452,15 +504,15 @@ $(function () {
 
         $("#abilityFour").text(charInfo[6]);
 
-        $(".abilityOneDescription").text(charInfo[8]);
+        $(".abilityOneDescription").text(charInfo[7]);
 
-        $(".abilityTwoDescription").text(charInfo[9]);
+        $(".abilityTwoDescription").text(charInfo[8]);
 
-        $(".abilityThreeDescription").text(charInfo[10]);
+        $(".abilityThreeDescription").text(charInfo[9]);
 
-        $(".abilityFourDescription").text(charInfo[11]);
+        $(".abilityFourDescription").text(charInfo[10]);
     })
-
+    //startBtn function for NPC Abilities, Ability Descriptions and other NPC info//
     $(document).on("click", "#startBtn", function () {
 
         $("#npcName").text(npcInfo[0]);
@@ -475,29 +527,33 @@ $(function () {
 
         $("#npcAbilityFour").text(npcInfo[6]);
 
-        $(".npcAbilityOneDescription").text(npcInfo[8]);
+        $(".npcAbilityOneDescription").text(npcInfo[7]);
 
-        $(".npcAbilityTwoDescription").text(npcInfo[9]);
+        $(".npcAbilityTwoDescription").text(npcInfo[8]);
 
-        $(".npcAbilityThreeDescription").text(npcInfo[10]);
+        $(".npcAbilityThreeDescription").text(npcInfo[9]);
 
-        $(".npcAbilityFourDescription").text(npcInfo[11]);
+        $(".npcAbilityFourDescription").text(npcInfo[10]);
     })
 
-
+    // Modal Pop-Up dynamic function//
     function abilityOne(pick) {
 
         switch (pick) {
             case image1:
-                var ability = Hannibal.abilities[0];
+                var ability = Hannibal.abilities.one;
                 $("#abilityOnePrompt").html(ability);
                 break;
             case image2:
-                var ability = BAB.abilities[0];
+                var ability = BAB.abilities.one;
                 $("#abilityOnePrompt").html(ability);
                 break;
             case image3:
-                var ability = BAB.abilities[0];
+                var ability = Murdock.abilities.one;
+                $("#abilityOnePrompt").html(ability);
+                break;
+            case image4:
+                var ability = Face.abilities.one;
                 $("#abilityOnePrompt").html(ability);
                 break;
 
@@ -506,16 +562,20 @@ $(function () {
     function abilityTwo() {
         switch (pick) {
             case image1:
-                var ability = Hannibal.abilities[1];
+                var ability = Hannibal.abilities.two;
                 $("#abilityTwoPrompt").html(ability);
                 break;
             case image2:
-                var ability = BAB.abilities[1];
+                var ability = BAB.abilities.two;
                 $("#abilityTwoPrompt").html(ability);
                 break;
             case image3:
-                var ability = BAB.abilities[1];
+                var ability = Murdock.abilities.two;
                 $("#abilityTwoPrompt").html(ability);
+                break;
+            case image4:
+                var ability = Face.abilities.two;
+                $("#abilityOnePrompt").html(ability);
                 break;
 
         }
@@ -523,16 +583,20 @@ $(function () {
     function abilityThree() {
         switch (pick) {
             case image1:
-                var ability = Hannibal.abilities[2];
+                var ability = Hannibal.abilities.three;
                 $("#abilityThreePrompt").html(ability);
                 break;
             case image2:
-                var ability = BAB.abilities[2];
+                var ability = BAB.abilities.three;
                 $("#abilityThreePrompt").html(ability);
                 break;
             case image3:
-                var ability = BAB.abilities[2];
+                var ability = Murdock.abilities.three;
                 $("#abilityThreePrompt").html(ability);
+                break;
+            case image4:
+                var ability = Face.abilities.three;
+                $("#abilityOnePrompt").html(ability);
                 break;
 
         }
@@ -540,16 +604,20 @@ $(function () {
     function abilityFour() {
         switch (pick) {
             case image1:
-                var ability = Hannibal.abilities[3];
+                var ability = Hannibal.abilities.four;
                 $("#abilityFourPrompt").html(ability);
                 break;
             case image2:
-                var ability = BAB.abilities[3];
+                var ability = BAB.abilities.four;
                 $("#abilityFourPrompt").html(ability);
                 break;
             case image3:
-                var ability = BAB.abilities[3];
+                var ability = Murdock.abilities.four;
                 $("#abilityFourPrompt").html(ability);
+                break;
+            case image4:
+                var ability = Face.abilities.four;
+                $("#abilityOnePrompt").html(ability);
                 break;
 
         }
