@@ -19,7 +19,7 @@ $(function () {
     var npcImage2 = document.getElementById("craneFace");
     var npcImage3 = document.getElementById("deckerFace");
     var charInfo = [];
-
+    var clearCanvas = true;
     // Characters, Location, HP, Abilities //
 
     var Hannibal = {
@@ -120,16 +120,55 @@ $(function () {
             "Miss the Jump"
         ]
     }
+    var Crane = {
+        name: "Crane",
+        age: 34,
+        HP: 300,
+        abilities: [
+            "",
+            "",
+            "",
+            ""
+        ],
 
+        abilityDescriptions: [
+            "",
+            "",
+            "",
+            ""
+        ],
+        //Agility, Accuracy, Strength//
+        attributes: [
+            { strength } = (
+                20
+            ),
+
+        ]
+    }
     var Decker = {
         name: "Decker",
         age: 41,
         HP: 300,
         abilities: [
+            "Squad Cars",
+            "Corner 'Em",
+            "The Enemy of my Enemy...",
+            "Fixing the Deck"
+        ],
 
+        abilityDescriptions: [
+            "Call in the local Boys in Blue, reduce enemy Agility by 20 for 2 turns",
+            "Get the Team in a bad position, +20% Strength +20% Accuracy -20.0 Enemy Agility (50% chance of success)",
+            "Cooperate with the local baddies, +20 Strength for 2 turns",
+            "Call in Crane for morale support, +30% to All Stats for 2 turns"
         ],
         //Agility, Accuracy, Strength//
-        attributes: [""]
+        attributes: [
+            { strength } = (
+                20
+            ),
+
+        ]
     }
     //End Enemies//
 
@@ -227,7 +266,7 @@ $(function () {
         switch (char) {
             case '#lynchFace':
                 p = npcImage1;
-                sx = 50;
+                sx = 100;
                 sy = 0;
                 swidth = 200;
                 sheight = 200;
@@ -248,8 +287,8 @@ $(function () {
                 p = npcImage2;
                 sx = 30;
                 sy = 0;
-                swidth = 600;
-                sheight = 600;
+                swidth = 300;
+                sheight = 300;
                 npcInfo = [Crane.name,
                 Crane.age,
                 Crane.HP,
@@ -280,8 +319,8 @@ $(function () {
         return { pick, sx, sy, swidth, sheight }
     }
 
-
-
+    var currentImage = [];
+    var drawNpc = false;
     $(document).on("click", ".charBtn", function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
@@ -290,6 +329,25 @@ $(function () {
         console.log(img);
         ctx.rect(10, 10, 200, 200);
         ctx.drawImage(img.pick, img.sx, img.sy, img.swidth, img.sheight, 20, 20, 100, 100);
+        if (drawNpc) {
+            switch (startClicks) {
+                case 0:
+                    var npcImg = drawnNpcImg('#lynchFace')
+                    ctx.drawImage(npcImg.pick, npcImg.sx, npcImg.sy, npcImg.swidth, npcImg.sheight, 200, 0, 100, 100);
+                    break;
+                case 1:
+                    var npcImg = drawnNpcImg('#craneFace')
+                    ctx.drawImage(npcImg.pick, npcImg.sx, npcImg.sy, npcImg.swidth, npcImg.sheight, 200, 0, 100, 100);
+                    break;
+                case 2:
+                    var npcImg = drawnNpcImg('#deckerFace')
+                    ctx.drawImage(npcImg.pick, npcImg.sx, npcImg.sy, npcImg.swidth, npcImg.sheight, 200, 0, 100, 100);
+                    break;
+            }
+        }
+
+        currentImage.push(img.pick, img.sx, img.sy, img.swidth, img.sheight);
+
     })
 
     $(".charBtn").one("click", function () {
@@ -305,17 +363,23 @@ $(function () {
         if (startClicks === 0) {
             var npcP = '#lynchFace';
             var img = drawnNpcImg(npcP);
+            if (img.HP === 0) {
+                startClicks++;
+            }
         } else if (startClicks === 1) {
             var npcP = '#craneFace';
             var img = drawnNpcImg(npcP);
+            startClicks++;
         } else if (startClicks === 1) {
             var npcP = '#deckerFace';
             var img = drawnNpcImg(npcP);
+            startClicks++;
         }
         console.log(img);
-
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
         ctx.drawImage(img.pick, img.sx, img.sy, img.swidth, img.sheight, 200, 0, 100, 100);
-        startClicks++;
+
     })
 
 
@@ -323,6 +387,7 @@ $(function () {
     $("#startBtn").one("click", function () {
         if ($("#npcInfoArea").hasClass("hiddenImage")) {
             $("#npcInfoArea").toggleClass("hiddenImage");
+            drawNpc = true;
         }
     })
 
@@ -331,7 +396,7 @@ $(function () {
 
 
     $(document).on("click", ".charBtn", function () {
-        debugger;
+
 
         $("#name").text(charInfo[0]);
         $("#age").text("Age - " + charInfo[1]);
@@ -397,13 +462,55 @@ $(function () {
         }
     }
     function abilityTwo() {
+        switch (pick) {
+            case image1:
+                var ability = Hannibal.abilities[1];
+                $("#abilityTwoPrompt").html(ability);
+                break;
+            case image2:
+                var ability = BAB.abilities[1];
+                $("#abilityTwoPrompt").html(ability);
+                break;
+            case image3:
+                var ability = BAB.abilities[1];
+                $("#abilityTwoPrompt").html(ability);
+                break;
 
+        }
     }
     function abilityThree() {
+        switch (pick) {
+            case image1:
+                var ability = Hannibal.abilities[2];
+                $("#abilityThreePrompt").html(ability);
+                break;
+            case image2:
+                var ability = BAB.abilities[2];
+                $("#abilityThreePrompt").html(ability);
+                break;
+            case image3:
+                var ability = BAB.abilities[2];
+                $("#abilityThreePrompt").html(ability);
+                break;
 
+        }
     }
     function abilityFour() {
+        switch (pick) {
+            case image1:
+                var ability = Hannibal.abilities[3];
+                $("#abilityFourPrompt").html(ability);
+                break;
+            case image2:
+                var ability = BAB.abilities[3];
+                $("#abilityFourPrompt").html(ability);
+                break;
+            case image3:
+                var ability = BAB.abilities[3];
+                $("#abilityFourPrompt").html(ability);
+                break;
 
+        }
     }
 
     function a(c) {
