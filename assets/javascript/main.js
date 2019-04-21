@@ -455,9 +455,8 @@ $(function () {
 
     //NPC Start Button Functions//
     var startClicks = 0;
+    var music = true;
     $(document).on("click", "#startBtn", function () {
-
-
 
         if (startClicks === 0) {
             var npcP = '#lynchFace';
@@ -655,4 +654,21 @@ $(function () {
         }
 
     });
+    $("#nextRound").on("click", function () {
+        console.log(startClicks)
+        return startClicks++;
+    })
 })
+
+// Music Pause/Resume //
+var music = true;
+$("#musicBtn").on("click", function () {
+    if (music === true) {
+        $("#aTeamTheme").get(0).play();
+        return music = false;
+    } else {
+        $("#aTeamTheme").get(0).pause();
+        return music = true;
+    }
+})
+
