@@ -59,7 +59,12 @@ $(function () {
         attributes: {
             strength: 80,
             agility: 25,
-            accuracy: 85
+            accuracy: 85,
+            abOne: 1,
+            abTwo: 2,
+            abThree: 2,
+            abFour: 2,
+            cd: 2,
         },
         abilitiesFunction(abilitynumber) {
             var s = $(this).attributes.strength;
@@ -106,7 +111,12 @@ $(function () {
         attributes: {
             strength: 100,
             agility: 15,
-            accuracy: 75
+            accuracy: 75,
+            abOne: 1,
+            abTwo: 2,
+            abThree: 2,
+            abFour: 2,
+            cd: 2,
         },
     }
     var Murdock = {
@@ -141,7 +151,12 @@ $(function () {
         attributes: {
             strength: 60,
             agility: 35,
-            accuracy: 90
+            accuracy: 90,
+            abOne: 1,
+            abTwo: 2,
+            abThree: 2,
+            abFour: 2,
+            cd: 2,
         },
     }
 
@@ -155,6 +170,7 @@ $(function () {
             three: "Get The Girl",
             four: "Carbine Hail"
         },
+
         abilityDescriptions: {
             one: "Get ready for the battle: Take two turns next time you're up",
             two: "Get into character: put on your favorite disguise and avoid the next hit",
@@ -177,7 +193,12 @@ $(function () {
         attributes: {
             strength: 70,
             agility: 35,
-            accuracy: 85
+            accuracy: 85,
+            abOne: 1,
+            abTwo: 2,
+            abThree: 2,
+            abFour: 2,
+            cd: 2,
         },
     }
     //End A-Team//
@@ -220,7 +241,8 @@ $(function () {
         attributes: {
             strength: 120,
             agility: 40,
-            accuracy: 95
+            accuracy: 95,
+
         },
     }
     var Decker = {
@@ -251,10 +273,10 @@ $(function () {
 
 
     // END CHARACTERS //
-    var pick;
 
-    var drawnCharacterImg = function (char) {
-        debugger;
+
+    function drawnCharacterImg(char) {
+
         var sx = "";
         var sy = "";
         var swidth = "";
@@ -540,6 +562,7 @@ $(function () {
 
         switch (pick) {
             case image1:
+                console.log("hannibal1")
                 var ability = Hannibal.abilities.one;
                 $("#abilityOnePrompt").html(ability);
                 break;
@@ -558,6 +581,7 @@ $(function () {
 
         }
     }
+
     function abilityTwo() {
         switch (pick) {
             case image1:
@@ -627,12 +651,12 @@ $(function () {
     }
 
     $(".material-icons").on("click", function () {
-        debugger;
+
         var b = a(this);
-        var pick = $(document).drawnCharacterImg.pick;
+        var pick = drawnCharacterImg().pick;
         switch (b) {
             case "useAbilityOne":
-                console.log("Arrow 1")
+                console.log(pick)
 
                 abilityOne(pick);
                 break;
@@ -657,8 +681,44 @@ $(function () {
     $("#nextRound").on("click", function () {
         console.log(startClicks)
         return startClicks++;
-    })
+    });
+
+    //Attack Mechanism//
+    $("#attackBtn").on("click", function () {
+        console.log("att")
+        console.log($("#HP"))
+        var char = "";
+        var nameCheck = $("#name")
+        var npc = drawnNpcImg().pick;
+        var characterCheck = () => {
+            switch (nameCheck) {
+                case Hannibal.name:
+                    char = "hannibal";
+                    break;
+                case BAB.name:
+                    char = "BA";
+                    break;
+                case Murdock.name:
+                    char = "murdock";
+                    break;
+                case Face.name:
+                    char = "face";
+                    break;
+            }
+            return char;
+        };
+        characterCheck();
+
+        console.log(char)
+
+        switch (char, npc) {
+            case ($("#gameHannibal"), $("#LynchFace")):
+                console.log("works")
+                break;
+        }
+    });
 })
+
 
 // Music Pause/Resume //
 var music = true;
@@ -671,4 +731,5 @@ $("#musicBtn").on("click", function () {
         return music = true;
     }
 })
+
 
