@@ -125,15 +125,15 @@ $(function () {
         HP: 75,
         abilities: {
             one: "Socko's Modern Strike",
-            two: "Ride the Skies",
-            three: "Put em Down",
+            two: "Read the Skies",
+            three: "Put em Up",
             four: "Apache Commando Master Murdock"
         },
         abilityDescriptions: {
-            one: "Get ready for the battle: Take two turns next time you're up",
-            two: "Get into character: put on your favorite disguise and avoid the next hit",
-            three: "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
-            four: "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
+            one: "'Socko's got some business here' Socko joins the fight: +20 Strength, 2 turns",
+            two: "Murdock uses his knowledge of the universe and clouds to line the shot, +20 Accuracy +10 Strength",
+            three: "Using scare tactics, H.M. Murdock secures his reputation as one jive turkey. +30 Strength",
+            four: "Deal 100 Damage."
         },
         items: {
             specialOne: "Leather Bomber Jacket",
@@ -151,7 +151,7 @@ $(function () {
         attributes: {
             strength: 60,
             agility: 35,
-            accuracy: 90,
+            accuracy: 80,
             abOne: 1,
             abTwo: 2,
             abThree: 2,
@@ -172,10 +172,10 @@ $(function () {
         },
 
         abilityDescriptions: {
-            one: "Get ready for the battle: Take two turns next time you're up",
-            two: "Get into character: put on your favorite disguise and avoid the next hit",
-            three: "'Nade out: Lob one of Uncle Sam's favorite toys at... Uncle Sam.",
-            four: "Go Full Out: one extra turn, +20 Damage per hit, +20 agility"
+            one: "Something's in my eye... Oh wait, it's you. +20 Accuracy",
+            two: "These hands ain't just for pomade. +1 turn",
+            three: "Always got something better to do... Tawnia! (escape immediately)",
+            four: "Let 'Er Rip: 4 free shots, +20 Damage per hit, -10 Accuracy"
         },
         items: {
             specialOne: "Handkerchief",
@@ -196,7 +196,7 @@ $(function () {
             accuracy: 85,
             abOne: 1,
             abTwo: 2,
-            abThree: 2,
+            abThree: 1,
             abFour: 2,
             cd: 2,
         },
@@ -361,10 +361,10 @@ $(function () {
                     Face.abilities.two,
                     Face.abilities.three,
                     Face.abilities.four,
-                    Murdock.abilityDescriptions.one,
-                    Murdock.abilityDescriptions.two,
-                    Murdock.abilityDescriptions.three,
-                    Murdock.abilityDescriptions.four,
+                    Face.abilityDescriptions.one,
+                    Face.abilityDescriptions.two,
+                    Face.abilityDescriptions.three,
+                    Face.abilityDescriptions.four,
                     Face.items
                 ]
                 break;
